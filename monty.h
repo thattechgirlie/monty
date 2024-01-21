@@ -53,6 +53,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void free_stack(stack_t *head);
+
 int main(int argc, char *argv[]);
 void f_pall(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
