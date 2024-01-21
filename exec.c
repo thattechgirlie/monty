@@ -9,11 +9,16 @@
  */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-	instruction_t opst[] =  {
-				{"push", f_push}, {"pall", f_pall}, {"pop", f_pop}
-				{"add", f_add}, {"div", f_div}, {"swap", f_swap}
-				{"nop", f_nop}, {"sub", f_sub}, {"mul", f_mul}
-				{"pint", f_pint}, {NULL, NULL}
+	instruction_t opst[] = {
+				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
+				{"pop", f_pop},
+				{"add", f_add},
+				{"div", f_div},
+				{"swap", f_swap},
+				{"nop", f_nop},
+				{"sub", f_sub},
+				{"mul", f_mul},
+				{NULL, NULL}
 				};
 	unsigned int v = 0;
 	char *op;
