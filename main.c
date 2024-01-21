@@ -1,4 +1,6 @@
 #include "monty.h"
+#define _GNU_SOURCE
+#include <stdio.h>
 bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * main - this is the main code

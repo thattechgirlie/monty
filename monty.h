@@ -2,6 +2,7 @@
 #define MONTY_H
 #include <stdio.h>
 #include <string.h>
+#define _GNU_SOURCE
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -66,5 +67,7 @@ void f_nop(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
 void f_div(stack_t **head, unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
-
+void addnode(stack_t **head, int a);
+void addqueue(stack_t **head, int a);
+int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 #endif
