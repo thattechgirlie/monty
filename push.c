@@ -7,8 +7,7 @@
  */
 void f_push(stack_t **head, unsigned int counter)
 {
-int a, b = 0;
-flag = 0;
+int a, b = 0, fl = 0;
 
 if (bus.arg)
 {
@@ -17,11 +16,11 @@ if (bus.arg)
 	for (; bus.arg[b] != '\0'; b++)
 	{
 		if (bus.arg[b] > 57 || bus.arg[b] < 48)
-			flag = 1;
+			fl = 1;
 	}
-	if (flag == 1)
+	if (fl == 1)
 	{
-		fprintf(stderr, "L<line_number>: usage: push integer\n", counter);
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -30,16 +29,16 @@ if (bus.arg)
 }
 else
 {
-	fprintf(stderr, "L<line_number>: usage: push integer\n", counter);
+	fprintf(stderr, "L%d: usage: push integer\n", counter);
 	fclose(bus.file);
 	free(bus.content);
 	free_stack(*head);
 	exit(EXIT_FAILURE);
 }
-n = atoi(bus.arg);
+a = atoi(bus.arg);
 
 if (bus.lifi == 0)
-	addnode(head, n);
+	addnode(head, a);
 else
-	addqueue(head, n);
+	addqueue(head, a);
 }

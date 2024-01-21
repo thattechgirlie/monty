@@ -11,11 +11,11 @@ void f_sub(stack_t **head, unsigned int counter)
 	int v, nds;
 	a = *head;
 
-	for (nd = 0; a != NULL; nd++)
+	for (nds = 0; a != NULL; nds++)
 		a = a->next;
-	if (nd < 2)
+	if (nds < 2)
 	{
-		fprints(stderr, "L<line_number>: can't sub, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -25,5 +25,5 @@ void f_sub(stack_t **head, unsigned int counter)
 	v = a->next->n - a->n;
 	a->next->n = v;
 	*head = a->next;
-	free(aux);
+	free(a);
 }
