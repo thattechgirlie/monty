@@ -11,7 +11,7 @@ void f_pall(stack_t **head, unsigned int counter)
 	(void)counter;
 
 	h = *head;
-	
+
 	if (h == NULL)
 		return;
 	while (h)

@@ -5,7 +5,7 @@
  * @counter: counts the values
  * Return: returns value
  */
-void f_pop (stack_t **head, unsigned int counter)
+void f_pop(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 

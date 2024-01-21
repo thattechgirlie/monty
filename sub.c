@@ -9,6 +9,7 @@ void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *a;
 	int v, nds;
+
 	a = *head;
 
 	for (nds = 0; a != NULL; nds++)

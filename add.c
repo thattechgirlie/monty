@@ -9,6 +9,7 @@ void f_add(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, a;
+
 	h = *head;
 
 	while (h)
@@ -28,5 +29,5 @@ void f_add(stack_t **head, unsigned int counter)
 	a = h->n + h->next->n;
 	h->next->n = a;
 	*head = h->next;
-	free (h);
+	free(h);
 }

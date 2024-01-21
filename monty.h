@@ -2,7 +2,6 @@
 #define MONTY_H
 #include <stdio.h>
 #include <string.h>
-#define _GNU_SOURCE
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -20,9 +19,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 /**
  * struct bus_s - variables - args, file, linecontent
@@ -50,17 +49,16 @@ extern bus_t bus;
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
 void free_stack(stack_t *head);
 
 int main(int argc, char *argv[]);
 void f_pall(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
 void f_pint(stack_t **head, unsigned int counter);
-void f_pop (stack_t **head, unsigned int counter);
+void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
 void f_add(stack_t **head, unsigned int counter);
 void f_nop(stack_t **head, unsigned int counter);
