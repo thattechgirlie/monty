@@ -66,7 +66,7 @@ void f_nop(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
 void f_div(stack_t **head, unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
-void addnode(stack_t **head, int a);
-void addqueue(stack_t **head, int a);
+void addnode(stack_t **head, int n);
+void addqueue(stack_t **head, int n);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 #endif
